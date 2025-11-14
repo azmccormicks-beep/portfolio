@@ -1,85 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paul McCormick</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <script src="https://kit.fontawesome.com/2d40a6fc4a.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script
+      src="https://kit.fontawesome.com/2d40a6fc4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section id="landing-page">
       <nav>
         <figure>
-            <img id="personal-logo"src="./assets/logo.jpg"alt="">
+          <img id="personal-logo" src="./assets/logo.jpg" alt="" />
         </figure>
-       <ul class="nav__link--list">
-            <li class="nav__link">
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black">About</a>
-            </li>
-            <li class="nav__link">
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black">Projects</a>
-            </li>
-            <li class="nav__link">
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black">Contact</a>
-            </li>
-            <li class="nav__link click">
-                <a href="#" class="
-                nav__link--anchor
-                link__hover-effect
-                link__hover-effect--black"><i class="fa-solid fa-circle-half-stroke"></i></i></a>
-            </li>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
         </ul>
-      </nav> 
+      </nav>
       <header class="header">
         <div class="header__content">
-            <h1 class="title">Hey</h1>
-            <h1 class="title">I'm Paul</h1>
-            <p class="header__para">
-                I'm a <b class="blue">Frontend Software Engineer</b>  specializing 
-                in building (and occasionally designing) exceptional digital 
-                experiences. 
-                <br>
-                Here is a bit ore <b class="blue">about me.</b>
-            </p>
-            <div class="social__list">
-                <a href="https://linkedin.com/in/paul-mccormick-51444641" target="blank" class="social__link click">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/azmccormickz" target="blank" class= "social__link click">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://github.com/azmccormicks-beep" target="blank" class="social__link click">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="#" target="blank" class="social__link click">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </a>
-                
-            </div>
+          <h1 class="title">Hey</h1>
+          <h1 class="title">I'm Paul</h1>
+          <p class="header__para">
+            I'm a <b class="blue">Frontend Software Engineer</b> specializing in
+            building (and occasionally designing) exceptional digital
+            experiences.
+            <br />
+            Here is a bit ore <b class="blue">about me.</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://linkedin.com/in/paul-mccormick-51444641"
+              target="blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/azmccormickz"
+              target="blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/azmccormicks-beep"
+              target="blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" target="blank" class="social__link click">
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+          </div>
         </div>
       </header>
       <button class="mail__btn click">
         <i class="fa-solid fa-envelope"></i>
       </button>
-      <a href="#projects" class="scroll"> 
+      <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
     </section>
-
-
-</body>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="blue">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur totam quos consequuntur iure officia at debitis
+                    iste quod recusandae sequi mollitia ratione, provident, sit
+                    corporis. Animi iusto nesciunt optio illum!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
