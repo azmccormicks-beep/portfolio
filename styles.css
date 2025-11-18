@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -15,11 +15,11 @@ p {
   font-size: 16px;
   line-height: 1.5;
 }
-section {
-  background-color: rgb(245, 245 245);
-}
+
 .click {
+  cursor: pointer;
   transition: all 300ms ease-in-out;
+
 }
 .container {
   padding: 50px 0;
@@ -44,12 +44,44 @@ a {
 button {
   cursor: pointer;
 }
-.link__hover-effect{
+section {
+  background-color: rgb(245, 245 245);
+}
+input,
+textarea {
+  width: 100%;
+  background-color: #242424;
+  color: whitesmoke;
+  outline: none;
+  border: 1px solid #c0c4cc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 400ms ease-in-out;
+}
+.textarea{
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
+} 
+ 
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+input:hover, textarea:hover {
+  border-color: #dcdfe6;
+}
+.link__hover-effect {
   position: relative;
 }
-.link__hover-effect:after{
+input:focus, textarea:focus {
+  border-color: #f06449;
+}
+.link__hover-effect:after {
   content: "";
-  position: absolute; 
+  position: absolute;
   bottom: -4px;
   height: 4px;
   width: 0;
@@ -57,13 +89,13 @@ button {
   background-color: black;
   transition: all 300ms ease-in-out;
 }
-.link__hover-effect--white:after{
+.link__hover-effect--white:after {
   background-color: #ffff;
 }
-.link__hover-effect--black:after{
+.link__hover-effect--black:after {
   background-color: #242424;
 }
-.link__hover-effect:hover:after{
+.link__hover-effect:hover:after {
   left: 0;
   width: 100%;
 }
@@ -168,7 +200,7 @@ Landing Page
 Modal
 
 */
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -180,28 +212,27 @@ Modal
   border-radius: 20px;
   overflow: hidden;
   display: flex;
-
 }
 .modal__half {
   width: 50%;
   padding: 40px 72px;
-  
-} 
-.modal__about {
-  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+.modal__about {
+  background-color: whitesmoke;
+  
 }
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
 }
-.modal__language--img{
+.modal__language--img {
   width: 100%;
- 
 }
-.modal__language{
+.modal__language {
   width: 25%;
   padding: 16px;
   position: relative;
@@ -210,38 +241,105 @@ Modal
   align-items: center;
   transition: all 400ms ease;
 }
-.modal__language:hover .language__name{
+.modal__language:hover .language__name {
   transform: scale(1);
 }
-.modal__language:hover{
+.modal__language:hover {
   filter: brightness(80%);
   transform: scale(0.9);
 }
-.language__name{
- position: absolute;
- bottom: -10px;
- transform: scale(0);
- font-size: 16px;
- transition: all 400ms ease;
+.language__name {
+  position: absolute;
+  bottom: -10px;
+  transform: scale(0);
+  font-size: 16px;
+  transition: all 400ms ease;
 }
 .modal__contact {
   background-color: black;
   color: whitesmoke;
-  
 }
-.modal__title{
+.modal__title {
   font-size: 26px;
-  
-} 
-.modal__sub-title{
-  margin: 12px 0 24px 0;
 }
-.modal__para{
+.modal__sub-title {
+  margin: 12px 0 24px 0;
+  font-size: 14px;
+}
+.modal__para {
   margin-bottom: 12px;
   line-height: 1.75;
 }
+.form__item {
+  margin-bottom: 20px;
+}
+.form__submit
+  {
+  background-color: #f06449;
+  border: 2px solid #f06449;
+  color: whitesmoke;
+  font-weight: 700;
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 24px;
+  font-size: 20px;
+  transition: all 400ms ease;
+}
+.form__submit:hover {
+  background-color: transparent;
+  border-color: whitesmoke;
   
+}
+.form__submit:active {
+  border-color: #f06449;
+  color: #f06449;
+  
+}
+.modal__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+.modal__overlay--loading{
+  background-color: #242424;
+  position: absolute;
+  font-size: 80px;
+  z-index: -1
 
+}
+.modal__overlay--success{
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 28px;
+  }
+
+.fa-spinner {
+  animation: spinner 1000ms infinite linear;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.modal__exit
+{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: #ffffff ;
+  z-index: 100;
+}
 
 /*
 
@@ -298,10 +396,9 @@ PROJECTS SECTION
   margin-bottom: 24px;
   transition: all 600ms ease;
 }
-.project:hover .project__img{
+.project:hover .project__img {
   transform: scale(1.07);
   filter: blur(5px);
-
 }
 .project__wrapper {
   position: relative;
