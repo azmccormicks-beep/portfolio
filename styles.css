@@ -47,6 +47,7 @@ button {
 }
 section {
   background-color: rgb(245, 245 245);
+  transition: all 400ms ease;
 }
 input,
 textarea {
@@ -112,7 +113,33 @@ nav, .scroll, .header{
   visibility: hidden;
   transition: all 400ms ease;
 }
-
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .header__para,
+.dark-theme .fa-circle-half-stroke
+{
+  color: whitesmoke;
+}
+.dark-theme section {
+  background-color: #242424;
+}
+.dark-theme .scroll__icon{
+  border-color: whitesmoke;
+}
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after{
+  background-color: whitesmoke;
+} 
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--white:after{
+  background-color: #242424
+} 
+.dark-theme .mail__btn{
+  background-color: whitesmoke;
+  color: #242424;
+}
 /*
 
 Landing Page  
@@ -515,4 +542,67 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: whitesmoke;
+}
+/*
+
+shapes
+
+shapes on the first row
+height = 15vh
+
+shapes on the second row
+height = 50vh
+
+shapes on the third row
+height = 80vh
+
+shapes on the first column
+width = 5vw
+
+shapes on the second column
+width = 50vw
+
+shapes on the third column
+width = 80vw
+
+
+*/
+.shape{
+  position: fixed;
+}
+.shape--0{
+  top: 15vh;
+  left: 5vw;
+}
+.shape--1{
+  top: 15vh;
+  left: 50vw;
+}
+.shape--2{
+  top: 15vh;
+  left: 80vw;
+}
+.shape--3{
+  top: 50vh;
+  left: 5vw;
+}
+.shape--4{
+  top: 50vh;
+  left: 50vw;
+}
+.shape--5{
+  top: 50vh;
+  left: 80vw;
+}
+.shape--6{
+  top: 80vh;
+  left: 5vw;
+}
+.shape--7{
+  top: 80vh;
+  left: 50vw;
+}
+.shape--8{
+  top: 80vh;
+  left: 80vw;
 }
