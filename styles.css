@@ -19,8 +19,9 @@ p {
 .click {
   cursor: pointer;
   transition: all 300ms ease-in-out;
-
 }
+
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -98,6 +99,18 @@ input:focus, textarea:focus {
 .link__hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+nav, .scroll, .header{
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+.modal--open nav,
+ .modal--open .scroll,
+ .modal--open .header{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms ease;
 }
 
 /*
@@ -208,10 +221,19 @@ Modal
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+.modal--open .modal{
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
+  
+  
 }
 .modal__half {
   width: 50%;
@@ -220,18 +242,23 @@ Modal
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 400ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact{
+  transform: translateX(0%); 
 }
 .modal__about {
   background-color: whitesmoke;
+  transform: translateX(-110%);
   
 }
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
 }
-.modal__language--img {
-  width: 100%;
-}
+
 .modal__language {
   width: 25%;
   padding: 16px;
@@ -252,10 +279,13 @@ Modal
   position: absolute;
   bottom: -10px;
   transform: scale(0);
-  font-size: 16px;
   transition: all 400ms ease;
 }
+.modal__language--img {
+  width: 100%;
+}
 .modal__contact {
+  transform: translateX(110%);
   background-color: black;
   color: whitesmoke;
 }
@@ -301,17 +331,14 @@ Modal
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;  
+  display: none;  
   justify-content: center;
   align-items: center;
   z-index: -1;
 }
 .modal__overlay--loading{
   background-color: #242424;
-  position: absolute;
   font-size: 80px;
-  z-index: -1
-
 }
 .modal__overlay--success{
   background-color: #4bb543;
@@ -322,6 +349,7 @@ Modal
   }
   .modal__overlay--visible{
     z-index: 1;
+    display: flex;
   }
 
 .fa-spinner {

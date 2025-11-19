@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script src="port.js"></script>
-<script type="text/javascript">
-   (function(){
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  ></script>
+  <script src="port.js"></script>
+  <script type="text/javascript">
+    (function () {
       emailjs.init({
         publicKey: "izP1FCYbL8nq5mcD9",
       });
-   })();
-</script>
+    })();
+  </script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,7 +49,7 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -73,7 +74,8 @@
             building (and occasionally designing) exceptional digital
             experiences.
             <br />
-            Here is a bit ore <b class="blue">about me.</b>
+            Here is a bit more
+            <b class="blue click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -103,7 +105,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -111,52 +113,82 @@
       </a>
       <div class="modal">
         <div class="modal__half modal__about">
-            <h3 class="modal__title modal__title--about">Here's is a bit about me.</h3>
-            <h4 class="modal__sub-title modal__sub-title--about">Fontend Software Engineer.</h4>
-            <p class="modal__para">I am an old <b class="blue"> dude</b> getting ready to help you <b class=blue>get shit done.</b> 
-                <br>
-                 I currently work on difficult engineering <b class="blue">problems</b> and I am learning javascript and react right now.
-            </p>
-            <div class="modal__languages">
-                <figure class="modal__language">
-                    <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
-                    <span class="language__name">HTML</span>
-                </figure>
-                <figure class="modal__language">
-                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
-                    <span class="language__name">CSS</span>
-                </figure>
-                <figure class="modal__language">
-                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
-                    <span class="language__name">JavaScript</span>
-                </figure>
-                <figure class="modal__language">
-                    <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
-                    <span class="language__name">React</span>
-                </figure>
-            </div>
+          <h3 class="modal__title modal__title--about">
+            Here's is a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Fontend Software Engineer.
+          </h4>
+          <p class="modal__para">
+            I am an old <b class="blue click"> dude</b> getting ready to help
+            you <b class="blue">get shit done.</b>
+            <br />
+            I currently work on difficult engineering
+            <b class="blue">problems</b> and I am learning javascript and react
+            right now.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+              />
+              <span class="language__name">React</span>
+            </figure>
+          </div>
         </div>
         <div class="modal__half modal__contact">
-          <h3 class="modal__title modal__title--contact">
-            Let's have a chat!
-          </h3>
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__title modal__sub-title--contact">
             I am currently open to new opportunities.
           </h3>
           <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
-              <label class="form__item--lebel">Name</label>
-              <input class="input" name="user_name" type="text" required>
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
             </div>
             <div class="form__item">
-              <label class="form__item--lebel">Email</label>
-              <input class="input" name="user_email" type="email" required></input>
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
             </div>
             <div class="form__item">
-              <label class="form__item--lebel">Message</label>
-              <textarea class="input" name="message" type="text" required></textarea>
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">Send it my way</button>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
@@ -164,9 +196,7 @@
           <div class="modal__overlay modal__overlay--success">
             Thank you for reaching out! Looking forward to speaking to you soon.
           </div>
-
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
