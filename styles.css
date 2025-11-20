@@ -454,6 +454,7 @@ PROJECTS SECTION
   border-radius: 12px;
   margin-bottom: 24px;
   transition: all 600ms ease;
+  padding: 40px 0 0 0;
 }
 .project:hover .project__img {
   transform: scale(1.07);
